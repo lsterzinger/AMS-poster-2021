@@ -82,8 +82,8 @@
 %----------------------------------------------------------------------------------------
 %	OBJECTIVES
 %----------------------------------------------------------------------------------------
-    \begin{alertblock}{Overview}
-	\textit{Can a lack of environmental CCN/aerosol be a primary factor for Arctic cloud dissipation?}
+	\begin{alertblock}{Overview}
+		\textbf{Main Question:} Can a lack of environmental CCN/aerosol be a primary factor for Arctic cloud dissipation?
 	        \begin{itemize}
             \item Persistent mixed-phase boundary layer clouds are important regulators for Arctic (and global) climate.
             \item Accurately modeling Arctic clouds are important to properly simulate the global climate system.
@@ -100,6 +100,9 @@
 			\item Harrington 2-stream radiation
 			\item RAMS 2M bulk microphysics
 			\item Prescribed aerosol concentration
+			\item dx, dy = 62.5 m
+			\item dz = 6.25 m
+			\item Domain = 6 x 6 x 1.25 km
 		\end{itemize}
 		% \begin{tabular}{c|c}
 		% 	dx,dy & 6.25 m \\ \hline
@@ -107,6 +110,12 @@
 		% 	dt & 1 s \\ \hline
 		% 	x,y,z & 6 x 6 x 1.25 km 
 		% \end{tabular}
+		\section{Initial Profiles}
+		\begin{figure}
+			\centering
+			\includegraphics[width=\linewidth]{images/bl_profile.png}
+			\caption{Boundary layer $\theta$ profiles used to initialize LES simulations}
+		\end{figure}
 	\end{block}
 
 \end{column} % End of the first column
@@ -115,18 +124,18 @@
 
 \begin{column}{\twocolwid}
 	\begin{block}{Cases}
-		Two potential cases have been identified where cloud dissipation occurred coincidentally with a surface aerosol concentration decrease:
-		\begin{itemize}
-			\item Oliktok Point - May 12th, 2017 - Northern slope of Alaska - ocean/land boundary
-			\item ASCOS - August 31st, 2008 - Arctic ocean ice floe
-		\end{itemize}
-		
-		The plots below show radar reflectivity (a) and aerosol concentration (b).
-		\begin{figure}
-			\includegraphics[width=0.49\linewidth]{images/oli_timeseries.png}
-			\includegraphics[width=0.49\linewidth]{images/ascos_timeseries.png}
-
-		\end{figure}
+			Two potential cases have been identified where cloud dissipation occurred coincidentally with a surface aerosol concentration decrease:
+			\begin{itemize}
+				\item Oliktok Point - May 12th, 2017 - Northern slope of Alaska - ocean/land boundary
+				\item ASCOS - August 31st, 2008 - Arctic ocean ice floe
+			\end{itemize}
+			
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.49\linewidth]{images/oli_timeseries.png}
+				\includegraphics[width=0.49\linewidth]{images/ascos_timeseries.png}
+				\caption{Observed Ka-band radar reflectivity (top) and CPC aerosol concentration (bottom) for Oliktok Point and ASCOS}
+			\end{figure}	
 	\end{block}
 
 	\begin{alertblock}{Simulation Results}
@@ -135,6 +144,7 @@
 				\centering
 				\includegraphics[width=\linewidth]{images/oli_lwp.png}
 				\includegraphics[width=\linewidth]{images/ascos_lwp.png}
+				\caption{Observed and simulated liquid water path (LWP) for Oliktok Point (top) and ASCOS (bottom).}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\sepwid}\end{column}
@@ -155,7 +165,10 @@
 			\end{itemize}
 			\vspace{0.1em}
 			Compare LWP response to aerosol forcing against observed LWP at time of cloud dissipation.
-
+			\begin{itemize}
+				\item Oliktok Point simulated LWP response was much slower than observed
+				\item ASCOS simulated LWP response was similar to observed
+			\end{itemize}
 		\end{column}
 	\end{alertblock}
 \end{column}
@@ -201,7 +214,7 @@
 		\end{itemize}
 		
 		
-		This work was supported by US Department of Energy Atmospheric System Research Grant #DE-SC0019073-01
+		\small{This work was supported by US Department of Energy Atmospheric System Research Grant \#DE-SC0019073-01}
 	\end{block}
 
 \end{column}
